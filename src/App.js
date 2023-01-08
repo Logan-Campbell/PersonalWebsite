@@ -200,7 +200,7 @@ function App() {
             </div>
         </div>
         <footer className="text-center pb-4">
-          © 2023 Logan Campbell | <a className="contact-link px-1" rel="noreferrer" target="_blank" href="https://github.com/Logan-Campbell">Page Source</a>
+          © 2023 Logan Campbell | <a className="contact-link px-1" rel="noreferrer" target="_blank" href="https://github.com/Logan-Campbell/PersonalWebsite">Page Source</a>
         </footer>
       </div>
     </div>
