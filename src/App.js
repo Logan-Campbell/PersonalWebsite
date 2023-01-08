@@ -161,7 +161,7 @@ function App() {
               and Entity Framework for interacting with a database.
             </p>
             <div className="button-holder">
-              {linkImageButton("", githubLogoWhite, "Github Logo", "Github", "Github")}
+              {linkImageButton("https://github.com/Logan-Campbell/BlazorMessenger", githubLogoWhite, "Github Logo", "Github", "Github")}
             </div>
             <div className="image-holder">
               <img src={GroupChat} alt="Sending a message to the group chat"/>
