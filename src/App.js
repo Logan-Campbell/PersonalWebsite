@@ -1,23 +1,208 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import AppNavBar from './Nav.js';
+import githubLogoWhite from './img/logos/github-white.svg'
+import linkedInLogo from './img/logos/linkedin.png'
+import GroupChat from './img/projects/GroupChat.gif'
+import LoginPM from './img/projects/LoginPM.gif'
+import easyWin from './img/projects/ms-easy-win.PNG'
+import expertLose from './img/projects/ms-expert-lose.PNG'
+import FWLTNewForm from './img/projects/FWLT-new-forms.PNG'
+import FWLTExampleForm from './img/projects/FWLT-form-example.PNG'
+import FLWTEmployeeSubmission from './img/projects/FWLT-employee-submissions.PNG'
+
+import resume from './files/resume.pdf'
+
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Collapse from 'react-bootstrap/Collapse';
 
 function App() {
+  const projects = ["FWLT", "Chat", "Minesweeper"]
+  const [open, setOpen] = useState(false);
+  const linkImageButton = (src, image, alt, buttonText) =>{
+    return (
+      <Button className="link-button" rel="noreferrer" target="_blank" href={src}>{buttonText}<img src={image} alt={alt}/></Button>
+    );
+  };
+
+  const linkIconButton = (src, iconClass, buttonText) =>{
+    return (
+      <Button className="link-button" rel="noreferrer" target="_blank" href={src}>
+        {buttonText}
+        <span class="icon oi oi-file" title={buttonText + " icon"} aria-hidden="true"></span>
+      </Button>
+    );
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppNavBar projects={projects}/>
+        <Container className="section home-page" id="home" fluid>
+          <Row className="align-items-center">
+            <Col className="title" lg={true}>
+              <h5>Hi I'm</h5>
+              <h1>Logan Campbell</h1>
+              <h5>A Software/Web Developer</h5>
+            </Col>
+            <Col className="terminal" lg={true}>
+              
+            </Col>
+          </Row>
+        </Container>
+      <div className="background-container"><div className="scrolling-background"></div></div>
+      <div className="section " id="about">
+        <div className="text">
+          <h2>About</h2>
+          <p>
+          I'm Logan Campbell, currently a student at Okanagan College finishing up my Bachelor's Computer Information Systems (Graduating in 2023). 
+          I am an aspiring software developer and most interested in standalone software, but also enjoy full-stack web development. I also dabble 
+          in game development from time to time.    
+          </p>
+          <div className="button-holder">
+              {linkIconButton(resume, "file", "Resume")}
+          </div>
+        </div>
+      </div>
+      <div className="section" id="projects">
+        <div className="text">
+          <h2>Projects</h2>
+          <div className="project" id="FWLT">
+            <h4>Flexible Work Location Tool</h4>
+            <h5>What The Project Is</h5>
+            <p>
+              The Flexible Work Location Tool (FWLT) is an application being built for Interior Health as part of my
+              capstone project for Okanagan College. FWLT is needed to streamline the process of handling forms submitted 
+              by employees as currently it is done through sharing pdf files or physical copies. The forms are related to 
+              applying to work from home. Employees will fill out forms and submit them through the application then managers
+              can review the forms and approve or deny these forms. The forms take a data-driven 
+              approach, meaning all the questions and the answers are stored in a relational database instead of being hard-coded
+              in the front end.
+            </p>
+            <h5>Technologies Used</h5>
+            <ul>
+              <li>
+                Blazor WebAssembly hosted on ASP.NET Core
+              </li>
+              <li>
+                C#, HTML, CSS
+              </li>
+              <li>
+                Entity Framework
+              </li>
+              <li>
+                Microsoft SQL Server
+              </li>
+            </ul>
+            <h5>My Contrabution</h5>
+            <p>
+              The major parts I've worked on are graphical tables to display the forms and other information. 
+              This includes fetching information from the database through Entity Framework and Linq to API controllers that format the 
+              data and send it to the front end when requested. As well as the reusable front-end table component
+              that is used on four of the pages so far (two of the pages are shown below).
+            </p>
+            <h5>What I've Learned</h5>
+            <Button
+              onClick={() => setOpen(!open)}
+              aria-controls="FWLT-learned-text"
+              aria-expanded={open}
+              className="expand-btn"
+            >
+              {((open) ? "Close" : "Expand")}
+            </Button>
+            <Collapse in={open}>
+              <div id="FWLT-learned-text">
+                <p>
+                  The project is being developed as part of a group of ten others using Agile, Scrum, and some Extreme Programming methodologies. 
+                  During the project, I have learnt a ton about working with large groups, communication, and software development.
+                </p>
+                <p>
+                  How important it is to ask for help when stuck (especially from those with more experience) and put aside a bit of ego for the success 
+                  of the project. While working with others in XP pairs, learning to effectively communicate ideas back and forth, read other's code live
+                  and provide feedback and assistance take the feedback as well. Effectively discuss and resolve disagreements in a friendly productive manner.
+                </p>
+                <p>
+                  Lots about developing software in an Agile and Scrum approach, learning to self manage and being proactive enough to take on new tasks. Discussing 
+                  what we have done, will do etc. almost every day. Meeting with clients regularly to gain a better understanding of the kind of
+                  software that they need, and applying their feedback to our project.
+                </p>
+                <p>
+                  The critical role of version control, and being strict on uploading new features or fixes to their own branch. Submitting and reviewing pull
+                  requests to have more eyes so that hopefully no bugs slip through. I've read a lot of code reviewing my peers' work and found it
+                  incredibly useful for understanding the project well, but also as practice for being able better read and learn from others' code.
+                </p>
+                <p>
+                  Since others will be reading my code as well I've learnt to better write self-documenting code and better descriptive comments
+                  too, for more complex sections. I've also got to write tons of documentation for the project (which I can't show, unfortunately),
+                  and gotten lots of practice writing clear and in-depth explanations of the software.
+                </p>
+                <p>
+                  In short, I have learned how better work and communicate in large groups, applying agile methodologies, and have become a better
+                  programmer and software developer in general.
+                </p>
+              </div>
+            </Collapse>
+            <div className="image-holder">
+              <img src={FLWTEmployeeSubmission} alt="Table of Submitted forms by an employee"/>
+              <img src={FWLTNewForm} alt="Table of all forms"/>
+              <p>This page displays a form that is generated from data from the database, I didn't work on it's 
+              functionality specifically.</p>
+              <img src={FWLTExampleForm} alt="Example data driven form"/>
+            </div>
+            
+          </div>
+          <div className="project" id="Chat">
+            <h4>Chat Application</h4>
+            <p>
+              LANMessenger is a simple chatting application, it has a login system, and a Group Chat that allows all users to message to
+              (even users not logged in), and private messaging between users. It is built using Blazor WebAssembly, ASP.NET Core, 
+              and Entity Framework for interacting with a database.
+            </p>
+            <div className="button-holder">
+              {linkImageButton("", githubLogoWhite, "Github Logo", "Github", "Github")}
+            </div>
+            <div className="image-holder">
+              <img src={GroupChat} alt="Sending a message to the group chat"/>
+              <img src={LoginPM} alt="Logining in and sending a private message"/>
+            </div>
+            
+          </div>
+          <div className="project" id="Minesweeper">
+            <h4>Minesweeper Clone</h4>
+            <p>
+              Minesweeper clone built in Java with JavaFX and Gradle. The game has three difficulties like the original game (Easy, Intermediate, Expert)
+              a custom difficulty option which allows you to change the height, width and number of mines. It also writes to a file keeping track of 
+              high scores which are measured by how fast you win the game. It was built as part of a programming course at my college in 2020.
+            </p>
+            <div className="button-holder">
+              {linkImageButton("https://github.com/Logan-Campbell/MinesweeperJavaFX", githubLogoWhite, "Github Logo", "Github")}
+            </div>
+            <div className="image-holder">
+              <img src={easyWin} alt="Easy game win"/>
+              <img src={expertLose} alt="Expert game lose"/>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div className="" id="contact">
+        <div className="text">
+          <h2>Contact</h2>
+          <p>
+          If you want me for your projects, or have any questions the best way to contact me is at
+            <span className="email"> loganbmcampbell@gmail.com</span>.
+          </p>
+          <div className="button-holder">
+              {linkImageButton("https://github.com/Logan-Campbell", githubLogoWhite, "Github Logo", "Github")}
+              {linkImageButton("https://www.linkedin.com/in/logan-campbell-271025190/", linkedInLogo, "LinkedIn Logo", "LinkedIn")}
+            </div>
+        </div>
+        <footer className="text-center pb-4">
+          © 2023 Logan Campbell | <a className="contact-link px-1" rel="noreferrer" target="_blank" href="https://github.com/Logan-Campbell">Page Source</a>
+        </footer>
+      </div>
     </div>
   );
 }

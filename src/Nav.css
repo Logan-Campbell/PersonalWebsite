@@ -1,0 +1,56 @@
+.contact-link img {
+    max-height: 1.5rem;
+}
+
+.contact-link:hover, .contact-link:active  {
+    color: var(--color-tertirary);
+}
+
+Nav {
+    margin: auto;
+    background-color: var(--color-secondary);
+    border-bottom: 0.25rem solid var(--color-tertirary);
+}
+
+.section-link, .nav-link {
+    color: var(--color-primary);
+    font-weight: 900;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+button, button:focus, button:active {
+    color: var(--color-primary);
+    font-weight: 900;
+    outline: none;
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 8px;
+}
+
+.navbar-toggler, .navbar-toggler:focus, .navbar-toggler:active {
+    outline: none;
+    background: var(--color-tertirary);
+    border: 1px solid transparent;
+}
+
+.vr {
+    color: var(--color-primary);
+    height: 1rem;
+    width: 3px;
+    opacity: 1;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+@media (max-width: 768px) {
+    .vr {
+        visibility: collapse;
+        height: 0px;
+    }
+
+    .contact-link img {
+        margin-top: 1rem;
+    }
+     
+}
