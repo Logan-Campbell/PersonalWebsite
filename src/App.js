@@ -11,7 +11,7 @@ import FWLTNewForm from './img/projects/FWLT-new-forms.PNG'
 import FWLTExampleForm from './img/projects/FWLT-form-example.PNG'
 import FLWTEmployeeSubmission from './img/projects/FWLT-employee-submissions.PNG'
 
-import resume from './files/resume.pdf'
+import resume from './files/Logan_Campbell_Resume.pdf'
 
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
@@ -196,7 +196,7 @@ function App() {
           </p>
           <div className="button-holder">
               {linkImageButton("https://github.com/Logan-Campbell", githubLogoWhite, "Github Logo", "Github")}
-              {linkImageButton("https://www.linkedin.com/in/logan-campbell-271025190/", linkedInLogo, "LinkedIn Logo", "LinkedIn")}
+              {linkImageButton("https://www.linkedin.com/in/logan--campbell/", linkedInLogo, "LinkedIn Logo", "LinkedIn")}
             </div>
         </div>
         <footer className="text-center pb-4">

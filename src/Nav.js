@@ -2,7 +2,7 @@ import React from 'react';
 import './Nav.css';
 import linkedInLogo from './img/logos/linkedin.png'
 import githubLogo from './img/logos/github.svg'
-import resume from './files/resume.pdf'
+import resume from './files/Logan_Campbell_Resume.pdf'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -75,7 +75,7 @@ class AppNavBar extends React.Component{
                         
                     </Nav>
                     <Nav.Link className="contact-link px-1" rel="noreferrer" target="_blank" href={resume}>Resume</Nav.Link>
-                    <a className="contact-link px-1" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/logan-campbell-271025190/"><img src={linkedInLogo} alt="LinkedIn Logo"/></a>
+                    <a className="contact-link px-1" rel="noreferrer" target="_blank" href="https://www.linkedin.com/in/logan--campbell/"><img src={linkedInLogo} alt="LinkedIn Logo"/></a>
                     <a className="contact-link px-1" rel="noreferrer" target="_blank" href="https://github.com/Logan-Campbell"><img src={githubLogo} alt="Github Logo"/></a>
                     </Navbar.Collapse>
             </Navbar>
