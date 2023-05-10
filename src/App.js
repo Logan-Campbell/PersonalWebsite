@@ -4,7 +4,7 @@ import './App.css';
 import AppNavBar from './Nav.js';
 import githubLogoWhite from './img/logos/github-white.svg'
 import linkedInLogo from './img/logos/linkedin.png'
-import FWLTFormBuilder from './vid/FWLT-form-builder.m4v'
+import FWLTFormBuilder from './vid/FWLT-form-builder.mp4'
 import FWLTAnalytics from './img/projects/FWLT-analytics.PNG'
 import FWLTRolesTable from './img/projects/FWLT-roles-table.PNG'
 import FWLTEditingPermissions from './img/projects/FWLT-editing-permissions.PNG'
