@@ -23,7 +23,7 @@ import Col from 'react-bootstrap/Col';
 import Collapse from 'react-bootstrap/Collapse';
 
 function App() {
-  const projects = ["FWLT", "Networked Pong", "IOS Jump Game", "Chat", "Minesweeper"]
+  const projects = ["FWLT", "Networked Pong", "Chat", "Minesweeper"]
   const [open, setOpen] = useState(false);
   const linkImageButton = (src, image, alt, buttonText) =>{
     return (
