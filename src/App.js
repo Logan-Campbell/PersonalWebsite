@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
+import ReactPlayer from 'react-player';
 import './App.css';
 import AppNavBar from './Nav.js';
 import githubLogoWhite from './img/logos/github-white.svg'
 import linkedInLogo from './img/logos/linkedin.png'
+import FWLTFormBuilder from './vid/FWLT-form-builder.m4v'
+import FWLTAnalytics from './img/projects/FWLT-analytics.PNG'
+import FWLTRolesTable from './img/projects/FWLT-roles-table.PNG'
+import FWLTEditingPermissions from './img/projects/FWLT-editing-permissions.PNG'
 import GroupChat from './img/projects/GroupChat.gif'
 import LoginPM from './img/projects/LoginPM.gif'
 import easyWin from './img/projects/ms-easy-win.PNG'
 import expertLose from './img/projects/ms-expert-lose.PNG'
-import FWLTNewForm from './img/projects/FWLT-new-forms.PNG'
-import FWLTExampleForm from './img/projects/FWLT-form-example.PNG'
-import FLWTEmployeeSubmission from './img/projects/FWLT-employee-submissions.PNG'
+import pongGame from './img/projects/pong-game.png'
 
 import resume from './files/Logan_Campbell_Resume.pdf'
 
@@ -20,7 +23,7 @@ import Col from 'react-bootstrap/Col';
 import Collapse from 'react-bootstrap/Collapse';
 
 function App() {
-  const projects = ["FWLT", "Chat", "Minesweeper"]
+  const projects = ["FWLT", "Networked Pong", "Chat", "Minesweeper"]
   const [open, setOpen] = useState(false);
   const linkImageButton = (src, image, alt, buttonText) =>{
     return (
@@ -32,7 +35,7 @@ function App() {
     return (
       <Button className="link-button" rel="noreferrer" target="_blank" href={src}>
         {buttonText}
-        <span class="icon oi oi-file" title={buttonText + " icon"} aria-hidden="true"></span>
+        <span className="icon oi oi-file" title={buttonText + " icon"} aria-hidden="true"></span>
       </Button>
     );
   };
@@ -57,7 +60,7 @@ function App() {
         <div className="text">
           <h2>About</h2>
           <p>
-          I'm Logan Campbell, currently a student at Okanagan College finishing up my Bachelor's Computer Information Systems (Graduating in 2023). 
+          I'm Logan Campbell, currently a student at Okanagan College finishing up my Bachelor's Computer Information Systems. 
           I am an aspiring software developer and most interested in standalone software, but also enjoy full-stack web development. I also dabble 
           in game development from time to time.    
           </p>
@@ -77,14 +80,21 @@ function App() {
               capstone project for Okanagan College. FWLT is needed to streamline the process of handling forms submitted 
               by employees as currently it is done through sharing pdf files or physical copies. The forms are related to 
               applying to work from home. Employees will fill out forms and submit them through the application then managers
-              can review the forms and approve or deny these forms. The forms take a data-driven 
-              approach, meaning all the questions and the answers are stored in a relational database instead of being hard-coded
-              in the front end.
+              can review the forms and approve or deny these forms. The forms take a data-driven approach, meaning all the 
+              questions and the answers are stored in a relational database instead of being hard-coded in the front end.
+            </p>
+            <p>
+              Admins of the application can use a custom What You See Is What You Get (WYSIWYG) form builder for creating new forms that can
+              then be filled out by users. 
+            </p>
+            <p>
+              HR users can view varoius analytics related the application, like form approval rate, average manager response time, and
+              employee workplace by province.
             </p>
             <h5>Technologies Used</h5>
             <ul>
               <li>
-                Blazor WebAssembly hosted on ASP.NET Core
+                Blazor Server
               </li>
               <li>
                 C#, HTML, CSS
@@ -95,13 +105,14 @@ function App() {
               <li>
                 Microsoft SQL Server
               </li>
+              <li>
+                Tableau
+              </li>
             </ul>
             <h5>My Contrabution</h5>
             <p>
-              The major parts I've worked on are graphical tables to display the forms and other information. 
-              This includes fetching information from the database through Entity Framework and Linq to API controllers that format the 
-              data and send it to the front end when requested. As well as the reusable front-end table component
-              that is used on four of the pages so far (two of the pages are shown below).
+              One of the major parts I've worked on is the form builder WYSIWYG. This includes breaking done the problem in smaller sizable chunks, 
+              building out a general structure, and actually programming large portion of the component.
             </p>
             <h5>What I've Learned</h5>
             <Button
@@ -116,7 +127,7 @@ function App() {
               <div id="FWLT-learned-text">
                 <p>
                   The project is being developed as part of a group of ten others using Agile, Scrum, and some Extreme Programming methodologies. 
-                  During the project, I have learnt a ton about working with large groups, communication, and software development.
+                  During the project, I have learnt a ton about working with large groups, communication, software development, and software engineering.
                 </p>
                 <p>
                   How important it is to ask for help when stuck (especially from those with more experience) and put aside a bit of ego for the success 
@@ -145,14 +156,42 @@ function App() {
               </div>
             </Collapse>
             <div className="image-holder">
-              <img src={FLWTEmployeeSubmission} alt="Table of Submitted forms by an employee"/>
-              <img src={FWLTNewForm} alt="Table of all forms"/>
-              <p>This page displays a form that is generated from data from the database, I didn't work on it's 
-              functionality specifically.</p>
-              <img src={FWLTExampleForm} alt="Example data driven form"/>
+              <p>
+                Form Builder in action.
+              </p>
+              <ReactPlayer url={FWLTFormBuilder} controls="true" />
+              <p>
+                Various analytics of the application are provided through Tableau Cloud, and displayed on our app.
+              </p>
+              <img src={FWLTAnalytics} alt="Map showing locations of users"/>
+              <p>
+                A table displaying all roles on the app, admins can add new roles as needed.
+              </p>
+              <img src={FWLTRolesTable} alt="Table of user roles"/>
+              <p>
+                Roles have many permissions and can be added or removed by admins.
+              </p>
+              <img src={FWLTEditingPermissions} alt="In the Middle of a game of pong"/>
             </div>
             
           </div>
+
+          <div className="project" id="Networked Pong">
+            <h4>Networked Pong</h4>
+            <p>
+              Networked Pong is a rendition of the classic that can be played over a network (Internet or LAN), as the name implies. Players connect
+              to the server application and once all players are connected then a game of pong is run. The server application handles all game logic, the client application
+              itself simply acts as a view reciveing game state from the server, updating the screen, and sends player input the the server. The applications
+              are written in Java, the client GUI uses Swing. The project was built for a network programming course at my college in April 2023.
+            </p>
+            <div className="button-holder">
+              {linkImageButton("https://github.com/Logan-Campbell/NetworkPong", githubLogoWhite, "Github Logo", "Github", "Github")}
+            </div>
+            <div className="image-holder">
+              <img src={pongGame} alt="In the Middle of a game of pong"/>
+            </div>
+          </div>
+
           <div className="project" id="Chat">
             <h4>Chat Application</h4>
             <p>
@@ -167,8 +206,8 @@ function App() {
               <img src={GroupChat} alt="Sending a message to the group chat"/>
               <img src={LoginPM} alt="Logining in and sending a private message"/>
             </div>
-            
           </div>
+
           <div className="project" id="Minesweeper">
             <h4>Minesweeper Clone</h4>
             <p>
