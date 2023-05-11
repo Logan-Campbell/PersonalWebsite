@@ -4,7 +4,6 @@ import './App.css';
 import AppNavBar from './Nav.js';
 import githubLogoWhite from './img/logos/github-white.svg'
 import linkedInLogo from './img/logos/linkedin.png'
-import FWLTFormBuilder from './vid/FWLT-form-builder.webm'
 import FWLTAnalytics from './img/projects/FWLT-analytics.PNG'
 import FWLTRolesTable from './img/projects/FWLT-roles-table.PNG'
 import FWLTEditingPermissions from './img/projects/FWLT-editing-permissions.PNG'
@@ -159,7 +158,10 @@ function App() {
               <p>
                 Form Builder in action.
               </p>
-              <ReactPlayer url={FWLTFormBuilder} controls="true" />
+              <ReactPlayer url='videos/FWLT-form-builder.webm' 
+                controls="true" 
+                width='100%'
+              />
               <p>
                 Various analytics of the application are provided through Tableau Cloud, and displayed on our app.
               </p>
