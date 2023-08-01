@@ -158,7 +158,7 @@ function App() {
               <p>
                 Form Builder in action.
               </p>
-              <ReactPlayer url='videos/FWLT-form-builder.webm' 
+              <ReactPlayer url='videos/FWLT-form-builder.mp4' 
                 controls="true" 
                 width='100%'
               />
