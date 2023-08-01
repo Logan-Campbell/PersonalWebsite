@@ -59,7 +59,7 @@ function App() {
         <div className="text">
           <h2>About</h2>
           <p>
-          I'm Logan Campbell, currently a student at Okanagan College finishing up my Bachelor's Computer Information Systems. 
+          I'm Logan Campbell, a Bachelor of Computer Information System graduate from Okanagan College. 
           I am an aspiring software developer and most interested in standalone software, but also enjoy full-stack web development. I also dabble 
           in game development from time to time.    
           </p>
