@@ -12,6 +12,8 @@ import LoginPM from './img/projects/LoginPM.gif'
 import easyWin from './img/projects/ms-easy-win.PNG'
 import expertLose from './img/projects/ms-expert-lose.PNG'
 import pongGame from './img/projects/pong-game.png'
+import tetradeMarathon from './img/projects/tetrade-marathon.png'
+import tetradeVersus from './img/projects/tetrade-versus.png'
 
 import resume from './files/Logan_Campbell_Resume.pdf'
 
@@ -22,7 +24,7 @@ import Col from 'react-bootstrap/Col';
 import Collapse from 'react-bootstrap/Collapse';
 
 function App() {
-  const projects = ["FWLT", "Networked Pong", "Chat", "Minesweeper"]
+  const projects = ["Tetrade", "FWLT", "Networked Pong", "Chat", "Minesweeper"]
   const [open, setOpen] = useState(false);
   const linkImageButton = (src, image, alt, buttonText) =>{
     return (
@@ -71,6 +73,40 @@ function App() {
       <div className="section" id="projects">
         <div className="text">
           <h2>Projects</h2>
+          <div className="project" id="Tetrade">
+            <h4>Tetrade: PlayStation Homebrew</h4>
+            <p>
+              <em>Tetrade</em> is a Tetris clone for the original PlayStation (released in 1994) and is fully playable in an emulator and on real PlayStation hardware. 
+              The game can be played solo or with two players, including a "versus" head-to-head mode, and plays very similarly to modern Tetris games. <em>Tetrade</em> is built 
+              using the community-created and open-source SDK <a href="https://github.com/Lameguy64/PSn00bSDK" rel="noreferrer" target="_blank">PSn00bSDK</a>, 
+              which is a set of libraries for interacting with the console's BIOS/hardware. <em>Tetrade</em> was created as a personal project in 2024
+            </p>
+            <p>
+              In recent years, there has been a resurgence in "retro"-styled games mainly focused on the N64 and PlayStation. I find this style 
+              fascinating even though I have no nostalgia for it (as it was before my time), as a result, I thought it would be fun to not only make 
+              a game in the style of the original PlayStation but one for it. This project served as a way to learn the hardware of the system, improve 
+              my C programming skills, <em>finish</em> more projects, and as a stepping stone to creating 3D games for the PlayStation. Overall, it was a 
+              fun opportunity to dive into lowish-level software development.
+            </p>
+            <h5>Technologies Used</h5>
+            <ul>
+              <li>C</li>
+              <li>cmake</li>
+            </ul>
+            <div className="button-holder">
+              {linkImageButton("https://github.com/Logan-Campbell/Tetrade", githubLogoWhite, "Github Logo", "Github", "Github")}
+            </div>
+            <div className="image-holder">
+              <p>
+                  Marathon Mode: allows 1 or 2 players to play simultaneously and independently.
+              </p>
+              <img src={tetradeMarathon} alt="Gameplay of marathon mode"/>
+              <p>
+                  Versus Mode: 2-player head-to-head.
+              </p>
+              <img src={tetradeVersus} alt="Gameplay of versus mode"/>
+            </div>
+          </div>
           <div className="project" id="FWLT">
             <h4>Flexible Work Location Tool</h4>
             <h5>What The Project Is</h5>
@@ -241,7 +277,7 @@ function App() {
             </div>
         </div>
         <footer className="text-center pb-4">
-          © 2023 Logan Campbell | <a className="contact-link px-1" rel="noreferrer" target="_blank" href="https://github.com/Logan-Campbell/PersonalWebsite">Page Source</a>
+          © 2025 Logan Campbell | <a className="contact-link px-1" rel="noreferrer" target="_blank" href="https://github.com/Logan-Campbell/PersonalWebsite">Page Source</a>
         </footer>
       </div>
     </div>
