@@ -1,5 +1,5 @@
 import React from 'react';
-import './Nav.css';
+//import './Nav.css';
 import linkedInLogo from './img/logos/linkedin.png'
 import githubLogo from './img/logos/github.svg'
 import resume from './files/Logan_Campbell_Resume.pdf'
