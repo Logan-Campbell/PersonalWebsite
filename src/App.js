@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import ReactPlayer from 'react-player';
-import './App.css';
+//import './App.css';
 import AppNavBar from './Nav.js';
 import githubLogoWhite from './img/logos/github-white.svg'
 import linkedInLogo from './img/logos/linkedin.png'
-import FWLTAnalytics from './img/projects/FWLT-analytics.PNG'
-import FWLTRolesTable from './img/projects/FWLT-roles-table.PNG'
-import FWLTEditingPermissions from './img/projects/FWLT-editing-permissions.PNG'
+import FWLTAnalytics from './img/projects/FWLT-analytics.png'
+import FWLTRolesTable from './img/projects/FWLT-roles-table.png'
+import FWLTEditingPermissions from './img/projects/FWLT-editing-permissions.png'
 import GroupChat from './img/projects/GroupChat.gif'
 import LoginPM from './img/projects/LoginPM.gif'
-import easyWin from './img/projects/ms-easy-win.PNG'
-import expertLose from './img/projects/ms-expert-lose.PNG'
+import easyWin from './img/projects/ms-easy-win.png'
+import expertLose from './img/projects/ms-expert-lose.png'
 import pongGame from './img/projects/pong-game.png'
 import tetradeMarathon from './img/projects/tetrade-marathon.png'
 import tetradeVersus from './img/projects/tetrade-versus.png'
@@ -61,8 +61,8 @@ function App() {
         <div className="text">
           <h2>About</h2>
           <p>
-          I'm Logan Campbell, a Bachelor of Computer Information System graduate from Okanagan College. 
-          I am an aspiring software developer and most interested in standalone software, but also enjoy full-stack web development. I also dabble 
+          I'm Logan Campbell, a Bachelor of Computer Information Systems graduate from Okanagan College. 
+          I am a software developer, most interested in standalone software, though I also enjoy full-stack web development. I also dabble 
           in game development from time to time.    
           </p>
           <div className="button-holder">
@@ -79,13 +79,13 @@ function App() {
               <em>Tetrade</em> is a Tetris clone for the original PlayStation (released in 1994) and is fully playable in an emulator and on real PlayStation hardware. 
               The game can be played solo or with two players, including a "versus" head-to-head mode, and plays very similarly to modern Tetris games. <em>Tetrade</em> is built 
               using the community-created and open-source SDK <a href="https://github.com/Lameguy64/PSn00bSDK" rel="noreferrer" target="_blank">PSn00bSDK</a>, 
-              which is a set of libraries for interacting with the console's BIOS/hardware. <em>Tetrade</em> was created as a personal project in 2024
+              which is a set of libraries for interacting with the console's BIOS/hardware. <em>Tetrade</em> was created as a personal project in 2024.
             </p>
             <p>
               In recent years, there has been a resurgence in "retro"-styled games mainly focused on the N64 and PlayStation. I find this style 
-              fascinating even though I have no nostalgia for it (as it was before my time), as a result, I thought it would be fun to not only make 
+              fascinating even though I have no nostalgia for it. As a result, I thought it would be fun to not only make 
               a game in the style of the original PlayStation but one for it. This project served as a way to learn the hardware of the system, improve 
-              my C programming skills, <em>finish</em> more projects, and as a stepping stone to creating 3D games for the PlayStation. Overall, it was a 
+              my C programming skills, <em>finish</em> more projects, and create a stepping stone for 3D games on the PlayStation. Overall, it was a 
               fun opportunity to dive into lowish-level software development.
             </p>
             <h5>Technologies Used</h5>
@@ -111,19 +111,19 @@ function App() {
             <h4>Flexible Work Location Tool</h4>
             <h5>What The Project Is</h5>
             <p>
-              The Flexible Work Location Tool (FWLT) is an application being built for Interior Health as part of my
-              capstone project for Okanagan College. FWLT is needed to streamline the process of handling forms submitted 
-              by employees as currently it is done through sharing pdf files or physical copies. The forms are related to 
-              applying to work from home. Employees will fill out forms and submit them through the application then managers
-              can review the forms and approve or deny these forms. The forms take a data-driven approach, meaning all the 
-              questions and the answers are stored in a relational database instead of being hard-coded in the front end.
+              The Flexible Work Location Tool (FWLT) was an application built for Interior Health as part of my
+              capstone project for Okanagan College. FWLT was needed to streamline the process of handling forms submitted 
+              by employees, which was previously done by sharing PDF files or physical copies. The forms were related to 
+              applying to work from home. Employees would fill out forms and submit them through the application, then managers
+              could review, approve, or deny them. The forms took a data-driven approach, meaning all the 
+              questions and the answers were stored in a relational database instead of being hard-coded in the front end.
             </p>
             <p>
-              Admins of the application can use a custom What You See Is What You Get (WYSIWYG) form builder for creating new forms that can
+              Admins of the application could use a custom What You See Is What You Get (WYSIWYG) form builder for creating new forms that can
               then be filled out by users. 
             </p>
             <p>
-              HR users can view varoius analytics related the application, like form approval rate, average manager response time, and
+              HR users could view various analytics related to the application, like form approval rate, average manager response time, and
               employee workplace by province.
             </p>
             <h5>Technologies Used</h5>
@@ -144,10 +144,10 @@ function App() {
                 Tableau
               </li>
             </ul>
-            <h5>My Contrabution</h5>
+            <h5>My Contribution</h5>
             <p>
-              One of the major parts I've worked on is the form builder WYSIWYG. This includes breaking done the problem in smaller sizable chunks, 
-              building out a general structure, and actually programming large portion of the component.
+              One of the major parts I've worked on was the form builder WYSIWYG. This included breaking down the problem into smaller manageable chunks, 
+              building out a general structure, and actually programming a large portion of the component.
             </p>
             <h5>What I've Learned</h5>
             <Button
@@ -161,8 +161,8 @@ function App() {
             <Collapse in={open}>
               <div id="FWLT-learned-text">
                 <p>
-                  The project is being developed as part of a group of ten others using Agile, Scrum, and some Extreme Programming methodologies. 
-                  During the project, I have learnt a ton about working with large groups, communication, software development, and software engineering.
+                  The project was developed as part of a group of ten others using Agile, Scrum, and some Extreme Programming methodologies. 
+                  During the project, I have learned a ton about working with large groups, communication, software development, and software engineering.
                 </p>
                 <p>
                   How important it is to ask for help when stuck (especially from those with more experience) and put aside a bit of ego for the success 
@@ -180,7 +180,7 @@ function App() {
                   incredibly useful for understanding the project well, but also as practice for being able better read and learn from others' code.
                 </p>
                 <p>
-                  Since others will be reading my code as well I've learnt to better write self-documenting code and better descriptive comments
+                  Since others will be reading my code as well I've learned to better write self-documenting code and better descriptive comments
                   too, for more complex sections. I've also got to write tons of documentation for the project (which I can't show, unfortunately),
                   and gotten lots of practice writing clear and in-depth explanations of the software.
                 </p>
@@ -195,7 +195,7 @@ function App() {
                 Form Builder in action.
               </p>
               <ReactPlayer url='videos/FWLT-form-builder.mp4' 
-                controls="true" 
+                controls={true} 
                 width='100%'
               />
               <p>
@@ -209,7 +209,7 @@ function App() {
               <p>
                 Roles have many permissions and can be added or removed by admins.
               </p>
-              <img src={FWLTEditingPermissions} alt="In the Middle of a game of pong"/>
+              <img src={FWLTEditingPermissions} alt="Add or Remove Permissions Form"/>
             </div>
             
           </div>
@@ -218,9 +218,9 @@ function App() {
             <h4>Networked Pong</h4>
             <p>
               Networked Pong is a rendition of the classic that can be played over a network (Internet or LAN), as the name implies. Players connect
-              to the server application and once all players are connected then a game of pong is run. The server application handles all game logic, the client application
-              itself simply acts as a view reciveing game state from the server, updating the screen, and sends player input the the server. The applications
-              are written in Java, the client GUI uses Swing. The project was built for a network programming course at my college in April 2023.
+              to the server application and, once all players are connected, a game of pong is run. The server application handles all game logic, the client application
+              itself simply acts as a view receiving game state from the server, updating the screen, and sending player input to the server. The applications
+              are written in Java and the client GUI uses Swing. The project was built for a network programming course at my college in April 2023.
             </p>
             <div className="button-holder">
               {linkImageButton("https://github.com/Logan-Campbell/NetworkPong", githubLogoWhite, "Github Logo", "Github", "Github")}
@@ -233,8 +233,8 @@ function App() {
           <div className="project" id="Chat">
             <h4>Chat Application</h4>
             <p>
-              LANMessenger is a simple chatting application, it has a login system, and a Group Chat that allows all users to message to
-              (even users not logged in), and private messaging between users. It is built using Blazor WebAssembly, ASP.NET Core, 
+              LANMessenger is a simple chatting application with a login system, a group chat that any user can send messages to
+              (even without logging in), and private messaging between users. It is built using Blazor WebAssembly, ASP.NET Core, 
               and Entity Framework for interacting with a database.
             </p>
             <div className="button-holder">
@@ -242,15 +242,15 @@ function App() {
             </div>
             <div className="image-holder">
               <img src={GroupChat} alt="Sending a message to the group chat"/>
-              <img src={LoginPM} alt="Logining in and sending a private message"/>
+              <img src={LoginPM} alt="Logging in and sending a private message"/>
             </div>
           </div>
 
           <div className="project" id="Minesweeper">
             <h4>Minesweeper Clone</h4>
             <p>
-              Minesweeper clone built in Java with JavaFX and Gradle. The game has three difficulties like the original game (Easy, Intermediate, Expert)
-              a custom difficulty option which allows you to change the height, width and number of mines. It also writes to a file keeping track of 
+              Minesweeper clone built in Java with JavaFX and Gradle. The game has three difficulties like the original game (Easy, Intermediate, and Expert),
+              and a custom difficulty option which allows you to change the height, width, number of mines. It also writes to a file keeping track of 
               high scores which are measured by how fast you win the game. It was built as part of a programming course at my college in 2020.
             </p>
             <div className="button-holder">
@@ -258,7 +258,7 @@ function App() {
             </div>
             <div className="image-holder">
               <img src={easyWin} alt="Easy game win"/>
-              <img src={expertLose} alt="Expert game lose"/>
+              <img src={expertLose} alt="Expert game loss"/>
             </div>
             
           </div>
@@ -268,8 +268,8 @@ function App() {
         <div className="text">
           <h2>Contact</h2>
           <p>
-          If you want me for your projects, or have any questions the best way to contact me is at
-            <span className="email"> loganbmcampbell@gmail.com</span>.
+          If you want me for your projects, or have any questions, the best way to contact me is at
+            <span className="email"> loganbmcampbell@gmail.com</span>
           </p>
           <div className="button-holder">
               {linkImageButton("https://github.com/Logan-Campbell", githubLogoWhite, "Github Logo", "Github")}
@@ -277,7 +277,7 @@ function App() {
             </div>
         </div>
         <footer className="text-center pb-4">
-          © 2025 Logan Campbell | <a className="contact-link px-1" rel="noreferrer" target="_blank" href="https://github.com/Logan-Campbell/PersonalWebsite">Page Source</a>
+          © 2026 Logan Campbell | <a className="contact-link px-1" rel="noreferrer" target="_blank" href="https://github.com/Logan-Campbell/PersonalWebsite">Page Source</a>
         </footer>
       </div>
     </div>
